@@ -1,0 +1,168 @@
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #BBB;
+    padding: 20px;
+}
+
+@media screen and (max-width: 500px) {
+    .screen {
+        transform: scale(0.5);
+        margin-bottom: 0 !important;
+    }
+}
+
+.screen {
+    width: 480px;
+    height: 270px;
+    background-color: #EEE;
+    border: 10px solid #000;
+    position: relative;
+    margin-bottom: 100px;
+}
+
+.screen::before,
+.screen::after {
+    content: '';
+    display: block;
+    background-color: #000;
+    position: absolute;
+}
+
+.screen::before {
+    width: 10px;
+    height: 60px;
+    bottom: -60px;
+    left: 50%;
+}
+
+.screen::after {
+    width: 200px;
+    height: 10px;
+    bottom: -60px;
+    left: calc(50% - 100px);
+}
+
+.distanceA,
+.distanceB,
+.distanceC {
+    position: absolute;
+}
+
+.distanceA {
+    width: 440px;
+    height: 5px;
+    background-color: red;
+    bottom: 5px;
+    left: 10px;
+}
+
+.distanceA::before {
+    content: 'A';
+    position: absolute;
+    top: -1.5rem;
+    left: 50%;
+    color: red;
+}
+
+.distanceB {
+    width: 5px;
+    height: 240px;
+    background-color: blue;
+    bottom: 5px;
+    right: 5px;
+}
+
+.distanceB::before {
+    content: 'B';
+    position: absolute;
+    left: -1.5rem;
+    top: 50%;
+    color: blue;
+}
+
+.distanceC {
+    width: 497px;
+    height: 5px;
+    background-color: green;
+    top: 122px;
+    left: -16px;
+    transform: rotate(-28deg);
+}
+
+.distanceC::before {
+    content: 'C';
+    position: absolute;
+    left: 50%;
+    top: -1.5rem;
+    color: green;
+}
+
+.values {
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+#valueA {
+    color: red;
+}
+
+#valueB {
+    color: blue;
+}
+
+#valueC {
+    color: green
+}
+
+#input-group {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    display: block;
+    margin-bottom: 20px;
+    width: 240px;
+}
+
+button {
+    outline: none;
+    background-color: #111;
+    border: none;
+    padding: 10px;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #141414;
+}
+
+button:active {
+    background-color: #0D0D0D;
+}
+
+#error {
+    color: red;
+    margin-bottom: 20px;
+}
